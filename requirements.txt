@@ -1,0 +1,8 @@
+# NLU
+rasa
+
+# STT
+deepspeech
+
+# TTS
+TTS
