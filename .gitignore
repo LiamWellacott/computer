@@ -1,3 +1,8 @@
+# my ignores 
+.DS_store
+rasa/models/
+stt/models/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

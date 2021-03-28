@@ -1,3 +1,9 @@
+# depends (split these because TTS fails to install...)
+numpy
+Cython
+pyaudio
+webrtcvad
+
 # NLU
 rasa
 
