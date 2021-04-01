@@ -3,6 +3,7 @@ numpy
 Cython
 pyaudio
 webrtcvad
+wave
 
 # NLU
 rasa
@@ -12,3 +13,6 @@ deepspeech
 
 # TTS
 TTS
+
+# face_rec
+face_recognition

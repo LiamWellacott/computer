@@ -2,6 +2,7 @@
 .DS_store
 rasa/models/
 stt/models/
+tts/output.wav
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

@@ -7,15 +7,29 @@ import deepspeech
 import numpy as np
 
 from stt.vadaudio import VADAudio
+
+from tts.mozila_tts import MozillaTTS
+
+from face_rec.face_waker import FaceWaker
+
 logging.basicConfig(level=20)
 
 def main():
+    # Load TTS
+    tts = MozillaTTS()
+
     # Load DeepSpeech model
     model_dir = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'stt', 'models')
     model = deepspeech.Model(os.path.join(model_dir, 'deepspeech-0.9.3-models.pbmm'))
     model.enableExternalScorer(os.path.join(model_dir, 'deepspeech-0.9.3-models.scorer'))
 
     # Start session when seeing me
+    fw = FaceWaker()
+    while True:
+        if 'liam' in fw.check():
+            tts.say('Hello Liam you fool')
+        time.sleep(1.0)
+
 
     # Start audio with VAD
     # agressiveness is 0-3 and affects how much it will try to filter speech
